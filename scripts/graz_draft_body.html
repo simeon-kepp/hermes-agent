@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hermes Graz Installer</title>
+</head>
+<body style="margin:0;padding:0;background:#f5f5f5;font-family:Arial,Helvetica,sans-serif;">
+  <table width="100%" cellpadding="0" cellspacing="0" style="max-width:680px;margin:0 auto;background:#fff;padding:32px 24px;">
+    <tr>
+      <td style="font-size:20px;font-weight:bold;color:#1a1a1a;margin-bottom:12px;">
+        Hermes Graz — fertig auf GitHub
+      </td>
+    </tr>
+    <tr>
+      <td style="font-size:14px;color:#333;line-height:1.6;margin-top:12px;">
+        <p>Der Powerbash-Installer liegt live auf meinem Fork:</p>
+        <p style="margin:8px 0;">
+          <strong>Repo:</strong><br>
+          <a href="https://github.com/simeon-kepp/hermes-agent" style="color:#2563eb;">https://github.com/simeon-kepp/hermes-agent</a>
+        </p>
+        <p style="margin:8px 0;">
+          <strong>Skript:</strong><br>
+          <a href="https://github.com/simeon-kepp/hermes-agent/blob/main/scripts/install-graz.sh" style="color:#2563eb;">https://github.com/simeon-kepp/hermes-agent/blob/main/scripts/install-graz.sh</a>
+        </p>
+        <p style="margin:8px 0;">
+          <strong>One-Liner:</strong><br>
+          <code style="background:#f1f5f9;padding:2px 6px;border-radius:4px;font-size:13px;">curl -fsSL https://raw.githubusercontent.com/simeon-kepp/hermes-agent/main/scripts/install-graz.sh | bash</code>
+        </p>
+        <hr style="border:none;border-top:1px solid #e5e7eb;margin:20px 0;">
+        <p style="margin:8px 0;"><strong>Was das Skript macht:</strong></p>
+        <ul style="margin:8px 0;padding-left:20px;line-height:1.7;">
+          <li>Erkennt automatisch das Betriebssystem (Linux, macOS, WSL, Termux)</li>
+          <li>Clont den Fork <code>simeon-kepp/hermes-agent</code> mit allen Skills und Einstellungen</li>
+          <li>Portiert alle individuellen Skills aus <code>~/.hermes/skills</code> (1:1)</li>
+          <li>Initialisiert RuVector-Schema und Engram-Schema</li>
+          <li>Schreibt <code>config.yaml</code> mit RFI-IRFOS-Defaults</li>
+          <li>Installiert Hermes komplett inklusive Dependencies</li>
+          <li>Linkt das <code>hermes</code> Command nach <code>~/.local/bin/</code></li>
+          <li>Keine Secrets nötig — API-Keys macht der User danach mit <code>hermes model</code></li>
+        </ul>
+        <hr style="border:none;border-top:1px solid #e5e7eb;margin:20px 0;">
+        <p style="margin:8px 0;"><strong>Unterschied zum upstream:</strong></p>
+        <p style="margin:8px 0;">Der offizielle NousResearch-Installer zieht nur die Basis. Dieser Fork zieht zusätzlich alle Skills, Schemata und Einstellungen direkt mit — fertig für Graz, ohne manuelle Nacharbeit.</p>
+        <hr style="border:none;border-top:1px solid #e5e7eb;margin:20px 0;">
+        <p style="margin:8px 0;"><strong>Einsatzszenario:</strong></p>
+        <p style="margin:8px 0;">Perfekt für Christian (Blumengeschäft Graz) und alle weiteren lokalen Kunden — ein Befehl, fertig. Kein GitHub-Zwang für den Endnutzer, keine manuelle Konfiguration.</p>
+        <p style="margin:8px 0;color:#666;font-size:13px;">
+          RFI-IRFOS Graz — Simeon<br>
+          ZVR 1015608684
+        </p>
+      </td>
+    </tr>
+  </table>
+</body>
+</html>
